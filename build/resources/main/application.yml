@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://<HOST>:<PORT>/dmpadmindb?autoReconnect=true&useSSL=false&characterEncoding=utf-8&tinyInt1isBit=false
+    url : jdbc:mysql://dmp-real-service.cplt90o0ehi3.ap-northeast-1.rds.amazonaws.com:3306/dmpmanager_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&tinyInt1isBit=false
+    username: bora_manager
+    password: mng4dmp~
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+      hibernate.enable_lazy_load_no_trans: true
+      # jpa mysql function
+      # hibernate.metadata_builder_contributor: com.igaworks.dmp.auth.repository.function.Add itionalFunction
+      # hibernate.globally_quoted_identifiers: true
+      # hibernate.globally_quoted_identifiers_skip_column_de finitions: true
+    database: mysql
+
